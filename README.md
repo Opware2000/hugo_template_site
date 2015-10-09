@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # hugo_template_site
-Template pour mon site personnel
-=======
-# HugoMDL
+Template pour mon site personnel basé sur HugoMDL
 
 HugoMDL is a multipage responsibe blog/portfolio theme for [Hugo](http://gohugo.io). The theme is based on the
 [Material Design Lite](http://www.getmdl.io/) sample blog layout. 
