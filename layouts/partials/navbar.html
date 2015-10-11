@@ -2,6 +2,8 @@
     <header class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
         <div class="mdl-layout__header-row">
             <!-- Title -->
+
+            <span class="mdl-layout-title">{{ .Title }}</span>
             {{ if eq .Title "Projects" }}
             <span class="mdl-layout-title">{{ title .Title }}</span>
             {{ end }}
