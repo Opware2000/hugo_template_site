@@ -1,5 +1,5 @@
 body::before {
-    background-image: url('/images/background.jpg');
+    background-image: url('/images/background1x.jpg');
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -10,6 +10,14 @@ body::before {
     bottom: 0;
     top: 0;
     position: fixed;
+    background-image: -webkit-image-set(
+        url('/images/background1x.jpg') 1x,
+        url('/images/background2x.jpg') 2x
+      );
+      background-image: image-set(
+        url('/images/background1x.jpg') 1x,
+        url('/images/background2x.jpg') 2x
+      );
 }
 body .hugo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
