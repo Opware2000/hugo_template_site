@@ -436,3 +436,11 @@ body .hugo-blog {
   line-height: 20px;
   text-decoration: none;
 }
+/* ---- Mise en forme du titre du site sur la 1ere page
+*/
+h2.site-title {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: #263654;
+  margin:0;
+}

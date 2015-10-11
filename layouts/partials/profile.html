@@ -1,5 +1,15 @@
 <!-- Card to display blogger's name, contact, etc -->
 <div class="mdl-card profile-card mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+    <div class="mdl-card__supporting-text">
+     {{ with .Site.Title }}<h2 class="display3 site-title">{{ . | safeHTML}}</h2>{{ end }}
+     </div>
+     <div>
+        {{ with .Site.Params.description }}
+            <div >
+            <h5>{{ . | safeHTML }}</h5>
+            </div>
+        {{ end }}
+    </div>
     <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" style="background-image: url('{{ .Site.Params.image }}');">
     </div>
     {{ partial "fab-buttons" .}}
