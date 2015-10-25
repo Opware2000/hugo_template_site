@@ -1,16 +1,10 @@
-            <footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer--left-section">
-                    {{ partial "socialbtns.html" . }}
-                </div>
-                <div class="mdl-mini-footer--right-section">
-                    <span>© {{ .Site.Params.copyrightyear }} {{ .Site.Params.name }}</span>
-                </div>
-            </footer>
-        </main>
-        <div class="mdl-layout__obfuscator"></div>
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; {{.Now.Format "2006"}}<br>
+      {{ with .Site.Params.copyright }}{{ . | markdownify}}{{ end }}
     </div>
-    <script src="/js/material.min.js"></script>
-    {{ if .IsPage }} {{ if ( eq .Type "post" ) }}<script src="/js/prism.js"></script>{{ end }}{{ end }}
-    {{ if .IsNode }} {{ partial "JS-cardmedia.html" . }} {{ partial "JS-fabbutton.html" . }}{{end}}
-</body>
-</html>
+  </div>
+</footer>
+
+{{ partial "footer_js" . }}

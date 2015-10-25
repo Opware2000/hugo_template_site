@@ -1,22 +1,35 @@
-<!-- Card to display blogger's name, contact, etc -->
-<div class="mdl-card profile-card mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-    <div class="mdl-card__supporting-text">
-     {{ with .Site.Title }}<h2 class="display3 site-title">{{ . | safeHTML}}</h2>{{ end }}
-     </div>
-     <div>
-        {{ with .Site.Params.description }}
-            <div >
-            <h5>{{ . | safeHTML }}</h5>
-            </div>
-        {{ end }}
+<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="{{ .Site.BaseURL }}css/images/avatar.png">
+      {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
+      {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
+      {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
+      {{ with .Site.Params.profile.follow_button }}
+          <a id="follow" href="{{ . }}">
+              {{with $.Site.Data.l10n.profile.follow_button}}{{.}}{{end}}
+          </a>
+      {{ end }}
     </div>
-    <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" style="background-image: url('{{ .Site.Params.image }}');">
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        {{ len (where .Site.Pages "Type" "post") }}
+        <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
+      </div>
+      <div class="article-info-block">
+        {{ len .Site.Taxonomies.tags }}
+        <span>
+            {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
+        </span>
+      </div>
     </div>
-    {{ partial "fab-buttons" .}}
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600 ">
-        <div>
-            <strong>{{ .Site.Params.name }}</strong>
-        </div>
-
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          {{ partial "social" . }}
+          <td><a href="{{ .RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
     </div>
-</div>
+  </div>
+</aside>

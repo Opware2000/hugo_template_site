@@ -1,16 +1,18 @@
-# theme.toml for Hugo-MDL
-# See http://jatkinson.me for an example
-
-name = "HugoMDL"
-license = "Apache 2.0"
-licenselink = "https://github.com/jchatkinson/HugoMDL/blob/master/LICENSE.md"
-description = "a simple and responsive theme to show your bio, blog, and projects - based on Google's Material Design Lite library"
-homepage = "http://jatkinson.me"
-tags = ["blog", "projects","portfolio","Material Design Lite","MDL","Material Design"]
-features = ["blog", "project showcase", "portfolio", "profile","responsive","Material Design"]
+name = "Icarus"
+license = "MIT"
+licenselink = "//github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md"
+description = "The blog theme you may fall in love with, coming to Hugo. "
+homepage = "//github.com/digitalcraftsman/hugo-icarus-theme"
+tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
+features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
 min_version = 0.14
 
 [author]
-  name = "Jeremy Atkinson"
-  homepage = "http://jatkinson.me"
-  email = "jeremy@jatkinson.me"
+  name = "Digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman"
+
+# If porting an existing theme
+[original]
+  name = "Ruipeng Zhang"
+  homepage = "//blog.zhangruipeng.me"
+  repo = "//github.com/ppoffice/hexo-theme-icarus"

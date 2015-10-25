@@ -1,48 +1,66 @@
+<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="{{ .Site.BaseURL }}" id="logo"><i class="logo" style="background-image: url('{{ .Site.BaseURL }}css/images/logo.png')"></i><span class="site-title">{{ .Site.Title }}</span></a>
+      <nav id="main-nav">
+          {{ range .Site.Params.menu }}
+          {{ if .before }}
+          <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
 
-<!DOCTYPE html>
-<html>
+          {{ range .Site.Menus.main }}
+          <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
 
-<head>
-    {{ .Hugo.Generator }}
-        <!--Favicon-->
-        <link rel="icon" type="image/png" href="/images/favicon.ico">
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="My thoughts and rambles">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ .Title }}</title>
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
-    
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=fr"/>
-        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/css/ionicons.min.css"/>
-        <link rel="stylesheet" href="/css/material.grey-orange.min.css"/>
-        <link rel="stylesheet" href="/css/styles.css"/>
-        {{ if .IsPage }} {{ if ( eq .Type "post" ) }} <link rel="stylesheet" href="/css/prism.css" /> {{end}} {{end}}
-</head>
+          {{ range .Site.Params.menu }}
+          {{ if not .before }}
+          <a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.BaseURL }}css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="{{with .Site.Data.l10n.search.placeholder}}{{.}}{{end}}">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          {{ range .Site.Params.menu }}
+          {{ if .before }}
+          <td><a class="main-nav-link" href="{{ .link | absURL }}">{{ .label }}</a></td>
+          {{ end }}
+          {{ end }}
 
-<body>
-    {{ if .IsPage }} 
-        {{ if (or ( eq .Type "post" ) ( eq .Type "project") ( eq .Type "about")) }} 
-            <div class="hugo-blog hugo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">  
-        {{ else }}
-            <div class="hugo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-        {{end}}
-    {{ else }} 
-        <div class="hugo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-    {{end}}
-        
-    {{ partial "navbar.html" . }}
-    <!-- Main Content goes here -->
-    <main class="mdl-layout__content">
+          {{ range .Site.Menus.main }}
+          <td><a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a></td>
+          {{ end }}
+
+          {{ range .Site.Params.menu }}
+          {{ if not .before }}
+          <td><a class="main-nav-link" href="{{ .link  | absURL }}">{{ .label }}</a></td>
+          {{ end }}
+          {{ end }}
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>

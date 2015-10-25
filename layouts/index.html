@@ -1,15 +1,15 @@
-{{ partial "header.html" . }}
+{{ partial "head" . }}
 
-<div class="hugo-blog__posts mdl-grid">
-    <!-- profile card -->
-    {{ partial "profile.html" . }}
-    
-    <!-- list of x most recent post snippets-->
-    {{ partial "postsnippets.html" . }}
-    
-    <!-- Button to show all posts -->
-    {{ partial "showallposts.html" . }}
+<div id="container">
+    {{ partial "header" . }}
 
+    <div class="outer">
+    {{ partial "profile" . }}
+    {{ partial "article_list" . }}
+    {{ partial "sidebar" . }}
+    </div>
 </div>
 
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}
+</body>
+</html>

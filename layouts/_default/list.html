@@ -1,19 +1,26 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ partial "head" . }} {{ partial "header" . }}
 
-<h3>Generic List Heading</h3>
-
-{{ range .Data.Pages }}
-{{ if eq .Type "post" }}
-<div class="section">
-    <h5><a class="black-text" href="{{ .Permalink }}">{{ .Title }}</a></h5> 
-    <b><a class="black-text" href="{{ .Params.author.website }}">{{ .Params.author.name }}</a></b>
-    <br>{{ .Date.Format "Mon, Jan 2, 2006" }}
-<!--    <blockquote>{{ .Summary }}</blockquote>-->
-    <a href="{{ .Permalink }}" class="grey-text text-darken-3 waves-effect waves-light btn-flat"><span>Read More</span></a>
+<div id="container">
+    <div class="outer">
+        {{ partial "profile" . }}
+        <section id="main">
+            <section class="archives-wrap">
+                <div class="archive-category-wrap">
+                    <span class="archive-category">{{ .Title }}</span>
+                </div>
+                <div class="archives">
+                    {{ $paginator := .Paginate .Data.Pages }}
+                    {{ range $paginator.Pages }}
+                        {{ .Render "summary" }} 
+                    {{ end }}
+                </div>
+            </section>
+            {{ partial "pagination" . }}
+        </section>
+        {{ partial "sidebar" . }}
+    </div>
 </div>
-<div class="divider"></div>
-{{ end }}
-{{ end }}
 
-{{ partial "footer.html" . }}
+{{ partial "footer" . }}
+</body>
+</html>
