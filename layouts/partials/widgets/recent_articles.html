@@ -5,7 +5,7 @@
     </h3>
     <div class="widget">
         <ul id="recent-post">
-            {{ range first 5 (where .Site.Pages "Type" "post") }}
+            {{ range first 5 (where .Site.Pages "Type" "blog") }}
             <li>
                 {{ with .Params.banner }}
                 <div class="item-thumbnail">
