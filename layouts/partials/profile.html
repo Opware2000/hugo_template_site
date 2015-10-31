@@ -23,6 +23,10 @@
         </span>
       </div>
     </div>
+    <div class="profile-block">
+    {{ $mymonths := index $.Site.Data.mois }}
+    <p style="text-align:center;">mise à jour <br />  {{ .Now.Day }} {{ index $mymonths (printf "%d" .Now.Month) }} {{ .Now.Year }} {{ .Now.Format "à 15:04" }}</p>
+    </div>
     <div class="contact-info profile-block">
       <table class="contact-list">
         <tr>
