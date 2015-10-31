@@ -1,12 +1,16 @@
-
 <footer class="article-footer">
-<div class="article-tag">
-<i class="fa fa-tag"></i>
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
             {{ range .Params.tags }}
             <a class="article-tag-link" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">{{ . }}</a>&nbsp;
             {{ end }}
-        </div>
-        <br />
+    </div>
+    <div >
+    <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+  Article publié le {{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }} (dernière modification le {{ .Lastmod.Day }} {{ index $.Site.Data.mois (printf "%d" .Lastmod.Month) }} {{ .Lastmod.Year }})
+</time>
+    </div>
+     <br />
     <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
         {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
     </a>
