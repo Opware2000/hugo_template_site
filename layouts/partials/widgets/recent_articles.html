@@ -11,7 +11,7 @@
                 {{ with .Params.banner }}
                 <div class="item-thumbnail">
                     <a href="{{ $.Permalink }}" class="thumbnail">
-                        <span style="background-image:url({{ $.Site.BaseURL }}{{ . }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                        <span style="background-image:url({{ $.Site.BaseURL }}images/{{ . }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     </a>
                 </div>
                 {{ end }}

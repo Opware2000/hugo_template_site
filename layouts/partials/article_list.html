@@ -1,19 +1,11 @@
 <section id="main">
     {{ $paginator := .Paginate (where .Site.Pages "Type" "blog") }}
     {{ range $paginator.Pages }}
-    {{ $banniere := "" }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
-            {{ if and (isset .Params "bannerlarge") (not (eq .Params.bannerlarge "")) }}
-            {{ $banniere := .Params.bannerlarge}}
-            {{ else }}
-                  {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-                  {{ $banniere := .Params.banner }}
-                  {{ else }} {{ $banniere := .Params.cover_image_url }}{{ end }}
-            {{ end }}
-            {{ if (not (eq $banniere "" )) }}
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
             <a href="{{ .Permalink }}" itemprop="url">
-                <img src="{{ .Site.BaseURL }}{{ $banniere }}" class="article-banner"> 
+                <img src="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" class="article-banner"> 
             </a>
             {{ end }}
             {{ partial "article_header" . }}
