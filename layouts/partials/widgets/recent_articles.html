@@ -31,8 +31,8 @@
                     </p>
                     {{ end }}
                     <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
-                    <p class="item-date">
-                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+                    <p class="item-date"><small>
+                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time></small>
                     </p>
                 </div>
             </li>
