@@ -2,7 +2,7 @@
     <div class="article-tag">
         <i class="fa fa-tag"></i>
             {{ range .Params.tags }}
-            <a class="article-tag-link" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">{{ . }}</a>&nbsp;
+            <a class="article-tag-link" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">#{{ . }}</a>&nbsp;
             {{ end }}
     </div>
     <div >
