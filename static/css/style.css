@@ -207,6 +207,7 @@ a:visited {
   text-decoration: none;
   text-transform: uppercase;
   color: #999;
+  font-size: 0.8rem;
   line-height: 1em;
 }
 #header,
@@ -951,6 +952,9 @@ a.article-title:hover {
   height: 100%;
   margin-top: 0;
 }
+.article-more-link{
+  text-align: center;
+}
 .article-more-link a {
   display: inline-block;
   line-height: 1em;
@@ -961,6 +965,7 @@ a.article-title:hover {
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
+  text-align:center;
 }
 .article-more-link a:hover {
   background: #38b7ea;
@@ -1878,3 +1883,33 @@ code.has-jax {
     border: inherit;
     color: #515151;
 }
+
+.label {
+  margin: 0 .25em;
+    background-color: #38b7ea;
+    display: inline;
+    padding: .2em .4em .3em;
+    /*font-size: 75%;*/
+
+    /*font-weight: bold;*/
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.article-footer a.label{
+    color:#FFF;
+}
+.article-footer .label:hover {
+      background: #49c8fb;
+}
+.article-footer .tagliste{
+  display: table-cell;
+  padding-left:1.2em;
+}
+.article-tag {
+  display: table;
+}
+.article-tag .fa{ display:table-cell;}
