@@ -3,11 +3,15 @@
     {{ range $paginator.Pages }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="article-inner">
+            <a href="{{ .Permalink }}" class="banner" itemprop="url">
             {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-            <a href="{{ .Permalink }}" itemprop="url">
+            
                 <img src="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" class="article-banner"> 
-            </a>
             {{ end }}
+            {{ if (not (isset .Params "banner")) }}
+            <img src="{{ .Site.BaseURL }}/images/header/writingonlaptop.jpg" class="article-banner">
+            {{ end }}
+            </a>
             {{ partial "article_header" . }}
             <div class="article-entry" itemprop="articleBody">
                 <p>
