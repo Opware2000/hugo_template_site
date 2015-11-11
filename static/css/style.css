@@ -1883,3 +1883,33 @@ code.has-jax {
     border: inherit;
     color: #515151;
 }
+
+.label {
+  margin: 0 .25em;
+    background-color: #38b7ea;
+    display: inline;
+    padding: .2em .4em .3em;
+    /*font-size: 75%;*/
+
+    /*font-weight: bold;*/
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.article-footer a.label{
+    color:#FFF;
+}
+.article-footer .label:hover {
+      background: #49c8fb;
+}
+.article-footer .tagliste{
+  display: table-cell;
+  padding-left:1.2em;
+}
+.article-tag {
+  display: table;
+}
+.article-tag .fa{ display:table-cell;}

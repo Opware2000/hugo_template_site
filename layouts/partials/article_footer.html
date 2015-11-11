@@ -1,9 +1,11 @@
 <footer class="article-footer">
     <div class="article-tag">
         <i class="fa fa-tag"></i>
+        <div class="tagliste">
             {{ range .Params.tags }}
-            <a class="article-tag-link" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">#{{ . }}</a>&nbsp;
+            <a class="article-tag-link label" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">#{{ . }}</a> 
             {{ end }}
+        </div>
     </div>
     <div >
   {{ if(isset .Params "Lastmod")}}
