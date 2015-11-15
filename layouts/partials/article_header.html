@@ -17,7 +17,7 @@
         </div>
         <div class="article-category">
             {{ range .Params.categories }}
-            <a class="article-category-link {{ . | lower }}" href="{{ $.Site.BaseURL }}categories/{{ . | lower }}"> <i class="fa fa-folder"></i>&nbsp;{{ . }}</a>&nbsp;
+            <a class="article-category-link {{ . | urlize }}" href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}"> <i class="fa fa-folder"></i>&nbsp;{{ . }}</a>&nbsp;
             {{ end }}
         </div>
     </div>
