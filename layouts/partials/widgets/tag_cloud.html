@@ -6,7 +6,7 @@
     </h3>
     <div class="widget tagcloud">
        {{ range first 20 .Site.Taxonomies.tags.ByCount }}
-        <a href="{{ $.Site.BaseURL }}tags/{{  .Name | urlize }}" style="font-size: 12px;"># {{ .Name }} ({{ .Count }})</a>
+       <label class="label"><a href="{{ $.Site.BaseURL }}tags/{{  .Name | urlize }}">{{ .Name }}</a><small>({{ .Count }})</small></label> 
         {{ end }}
     </div>
 </div>

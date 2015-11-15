@@ -1887,17 +1887,24 @@ code.has-jax {
 .label {
   margin: 0 .25em;
     background-color: #38b7ea;
-    display: inline;
-    padding: .2em .4em .3em;
+    display: block;
+    float: left;
+    margin: .2em ;
+    padding: .2em .3em .4em;
     /*font-size: 75%;*/
 
     /*font-weight: bold;*/
-    line-height: 1;
+    line-height: 1.2em;
     color: #fff;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25em;
+}
+.tagliste .label {
+  display: inline;
+  float:none;
+  margin:0;
 }
 .article-footer a.label{
     color:#FFF;
@@ -1913,3 +1920,8 @@ code.has-jax {
   display: table;
 }
 .article-tag .fa{ display:table-cell;}
+
+.widget .label a {color:#FFF;}
+.widget .label a:hover{color:#FFF;}
+.widget .label:hover{background-color: #34495e; color: #FFF;}
+.widget .label {color : #EEE;}
