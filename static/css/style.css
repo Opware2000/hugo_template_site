@@ -1913,3 +1913,30 @@ code.has-jax {
   display: table;
 }
 .article-tag .fa{ display:table-cell;}
+
+article .article-category-link {
+    background-color: #34495e;
+    padding: .2em .4em .3em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+article .article-category .sciences {
+  background-color: #1abc9c;
+  color: #FFF;
+}
+article .article-category .futura-sciences {
+  background-color: #e67e22;
+  color: #FFF;
+}
+article .article-category .pour-la-science {
+  background-color: #9b59b6;
+  color: #FFF;
+}
+article a.article-category-link:hover{
+  background-color: #7f8c8d;
+  color:#2c3e50;
+}
