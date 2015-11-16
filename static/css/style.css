@@ -1940,3 +1940,8 @@ article a.article-category-link:hover{
   background-color: #7f8c8d;
   color:#2c3e50;
 }
+
+.widget .label a {color:#FFF;}
+.widget .label a:hover{color:#FFF;}
+.widget .label:hover{background-color: #34495e; color: #FFF;}
+.widget .label {color : #EEE;}
