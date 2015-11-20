@@ -1,0 +1,28 @@
+<article class="archive-article archive-type-post">
+    <div class="archive-article-inner">
+        {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+        <div class="archive-article-thumbnail">
+            <a href="{{ .Permalink }}" class="thumbnail">
+                <span style="background-image:url({{ .Site.BaseURL }}images/header/{{ .Params.banner }})" alt="{{ .Title }}" class="thumbnail-image"></span>
+            </a>
+        </div>
+        {{ end }}
+            {{ if (not (isset .Params "banner")) }}
+            <div class="archive-article-thumbnail">
+            <a href="{{ .Permalink }}" class="thumbnail">
+                <span style="background-image:url({{ .Site.BaseURL }}/images/header/writingonlaptop.jpg)" alt="{{ .Title }}" class="thumbnail-image"></span>
+            </a>
+        </div>
+            {{ end }}
+            </a>
+        <header class="archive-article-header">
+            <h1 itemprop="name">
+                <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+            <div class="archive-article-date">
+                <i class="fa fa-calendar"></i>
+                <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+            </div>
+        </header>
+    </div>
+</article>
