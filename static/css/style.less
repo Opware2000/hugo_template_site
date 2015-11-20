@@ -2014,10 +2014,7 @@ article {
     font-size: 28px;
     line-height: 54px;
   }
-  #header-sub {
-    display: none;
-  }
-  #main-nav {
+  #header-sub, #main-nav {
     display: none;
   }
 }
@@ -2041,56 +2038,56 @@ article {
 }
 
 @media screen and (min-width: 1200px) {
-  #main {
+#main {
     display: inline;
     float: left;
+    margin: 0 0.7692307692308%;
     width: 52.3076923076923%;
-    margin: 0 0.7692307692308%;
-  }
-  #main-nav-mobile {
+}
+#main-nav-mobile {
     display: none;
-  }
-  #profile {
+}
+#profile {
     display: block;
-  }
-  #sub-nav {
+}
+#sub-nav {
     display: none;
-  }
-  #article-nav {
+}
+#article-nav {
     margin: 40px 0;
-  }
-  #article-nav:before {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -4px;
-    margin-left: -4px;
-    content: "";
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #787c81;
-  }
-  .article-nav-link-wrap {
-    width: 50%;
+    &:before {
+        -webkit-border-radius: 50%;
+        background: #787c81;
+        border-radius: 50%;
+        content: "";
+        height: 8px;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        width: 8px;
+    }
+}
+.article-nav-link-wrap {
     margin-top: 0;
-  }
-  #article-nav-newer {
+    width: 50%;
+}
+#article-nav-newer {
     float: left;
-    text-align: right;
     padding-right: 20px;
-  }
-  #article-nav-older {
+    text-align: right;
+}
+#article-nav-older {
     float: right;
-    text-align: left;
     padding-left: 20px;
-  }
-  #sidebar {
+    text-align: left;
+}
+#sidebar {
     display: inline;
     float: left;
-    width: 21.5384615384615%;
     margin: 0 0.7692307692308%;
-  }
+    width: 21.5384615384615%;
+}
 }
 
