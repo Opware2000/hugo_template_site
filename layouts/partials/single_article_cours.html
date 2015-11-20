@@ -9,6 +9,10 @@
             {{ end }}
             {{ partial "article_header" . }}
             <div class="article-entry cours" itemprop="articleBody">
+                <div id="toc" class="well col-md-4 col-sm-6">
+                {{ .TableOfContents }}
+                </div>
+                
                 {{ .Content }}
             </div>
             {{ partial "article_footer" . }}
