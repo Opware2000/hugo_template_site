@@ -1,3 +1,7 @@
+/* LESS */
+/* ----------------------------------- *
+ * FICHIER LESS DU TEMPLATE STYLE.LESS *
+ * ----------------------------------- */
 // Color variables (appears count calculates by raw css)
 @color0: #ffffff; // Appears 30 times
 @color1: #999999; // Appears 25 times
@@ -66,88 +70,76 @@
 @height11: 54px; // Appears 2 times
 @height12: 40px; // Appears 11 times
 
-@media {
-    screen {
-        and {
-            (min-width {
-                &:1200px) {
-                    #article-nav { margin: 40px 0;
-                    #article-nav-newer { float: left;
-                    #article-nav-older { float: right;
-                    #main { display: inline;
-                    #main-nav-mobile { display: none;
-                    #profile { display: block;
-                    #sidebar { display: inline;
-                    #sub-nav { display: none;
-                    .article-nav-link-wrap { width: @width18;
+@media screen {
+    @media (min-width:1200px) {
+        #article-nav { margin: 40px 0;}
+        #article-nav-newer { float: left;}
+        #article-nav-older { float: right;}
+        #main { display: inline;}
+        #main-nav-mobile { display: none;}
+        #profile { display: block;}
+        #sidebar { display: inline;}
+        #sub-nav { display: none;}
+        .article-nav-link-wrap { width: @width18;
+            float: left;
+            float: left;
+            margin-top: 0;
+            margin: 0 0.7692307692308%;
+            margin: 0 0.7692307692308%;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            text-align: right;
+            width: 52.3076923076923%;
+            width: @width3;
+        }
+    }
+    @media (min-width:800px) and (max-width :1199px) {
+                #main { display: inline;}
+                #main-nav-mobile { display: none;}
+                #sidebar { display: inline;
                     float: left;
                     float: left;
-                    margin-top: 0;
                     margin: 0 0.7692307692308%;
                     margin: 0 0.7692307692308%;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    text-align: left;
-                    text-align: right;
-                    width: 52.3076923076923%;
-                    width: @width3;
-                }
-                &:800px) {
-                    and {
-                        (max-width {
-                            &:1199px) {
-                                #main { display: inline;
-                                #main-nav-mobile { display: none;
-                                #sidebar { display: inline;
-                                float: left;
-                                float: left;
-                                margin: 0 0.7692307692308%;
-                                margin: 0 0.7692307692308%;
-                                width: 29.230769230769198%;
-                                width: 67.6923076923077%;
-                            }
-                        }
-                    }
-                }
-                &:560px) {
-                    and {
-                        (max-width {
-                            &:799px) {
-                                #header-sub { display: none;
-                                #main-nav { display: none;
-                                #toTop { width: @width17;
-                                font-size: 28px;
-                                height: @height11;
-                                line-height: @height11;
-                            }
-                        }
-                    }
+                    width: 29.230769230769198%;
+                    width: 67.6923076923077%;
                 }
             }
-            (max-width {
-                &:559px) {
-                    #header-sub { display: none;
-                    #main-nav { display: none;
-                    #main-nav-mobile .menu .search-form-input { display: block;
-                    #page-nav .page-number { display: none;
-                    #search-form-wrap { display: none;
-                    #toTop { width: @width17;
-                    .archive-article-thumbnail .thumbnail { width: 1@width13;
-                    .archive-article-title { font-size: 1em;
-                    .archive-year-wrap, .archive-category-wrap, .archive-tag-wrap, .layout-title { padding: 0 15px;
-                    .layout-wrap-inner { padding: 0 15px;
-                    .widget-wrap { margin: 40px 20px;
-                    display: block;
-                    font-size: 1.2em;
+        
+    @media (min-width:560px) and (max-width:799px) {
+                #header-sub { display: none;}
+                #main-nav { display: none;}
+                #toTop { width: @width17;
                     font-size: 28px;
-                    height: 1em;
-                    height: 67.5px;
                     height: @height11;
-                    line-height: 1em;
                     line-height: @height11;
-                    overflow: hidden;
                 }
             }
+        
+
+
+    @media (max-width:559px) {
+        #header-sub { display: none;}
+        #main-nav { display: none;}
+        #main-nav-mobile .menu .search-form-input { display: block;}
+        #page-nav .page-number { display: none;}
+        #search-form-wrap { display: none;}
+        #toTop { width: @width17;}
+        .archive-article-thumbnail .thumbnail { width: 1@width13;}
+        .archive-article-title { font-size: 1em;}
+        .archive-year-wrap, .archive-category-wrap, .archive-tag-wrap, .layout-title { padding: 0 15px;}
+        .layout-wrap-inner { padding: 0 15px;}
+        .widget-wrap { margin: 40px 20px;
+            display: block;
+            font-size: 1.2em;
+            font-size: 28px;
+            height: 1em;
+            height: 67.5px;
+            height: @height11;
+            line-height: 1em;
+            line-height: @height11;
+            overflow: hidden;
         }
     }
 }
