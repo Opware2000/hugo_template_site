@@ -46,6 +46,7 @@
 @color44: #dd4b39; // Appears 1 time
 @color45: #a21a1f; // Appears 1 time
 @color46: #6699cc; // Appears 1 time
+@color_cours_rouge : #d00;
 
 // Width variables (appears count calculates by raw css)
 @width0: 21.5384615384615%; // Appears 1 time
@@ -340,7 +341,7 @@ html {
         font-size: 1.2em;
         margin: 1.6em 20px;
        // text-align: center;
-        color: #d00;
+        //color: #d00;
         text-align:justify;
         margin: 0 0 1.25rem;
         padding: .5625rem 1.25rem 0 1.1875rem;
@@ -492,6 +493,12 @@ html {
         text-shadow: 0 1px @color0;
     }
 }
+
+.cours blockquote {
+        color: @color_cours_rouge;
+        border-left: 1px solid @color_cours_rouge;
+    }
+
 .widget {
     font-size: 0.9em;
     line-height: 1.6em;

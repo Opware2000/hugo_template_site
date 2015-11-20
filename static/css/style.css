@@ -326,7 +326,6 @@ html {
 .article-entry blockquote {
   font-size: 1.2em;
   margin: 1.6em 20px;
-  color: #d00;
   text-align: justify;
   margin: 0 0 1.25rem;
   padding: .5625rem 1.25rem 0 1.1875rem;
@@ -472,6 +471,10 @@ html {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   padding: 0 0.3em;
   text-shadow: 0 1px #ffffff;
+}
+.cours blockquote {
+  color: #dd0000;
+  border-left: 1px solid #dd0000;
 }
 .widget {
   font-size: 0.9em;
