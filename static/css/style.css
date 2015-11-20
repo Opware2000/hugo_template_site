@@ -324,10 +324,16 @@ html {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin: 1.6em 20px;
-  text-align: center;
+  color: #d00;
+  text-align: justify;
+  margin: 0 0 1.25rem;
+  padding: .5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #ddd;
+}
+.article-entry blockquote p {
+  padding-bottom: 1.6em;
 }
 .article-entry blockquote footer {
   font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
