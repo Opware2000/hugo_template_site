@@ -1,14 +1,15 @@
-<nav id="page-nav">
+
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-    {{ if .Paginator.HasPrev }}
-        <a class="extend prev" rel="prev" href="{{.Paginator.Prev.URL}}">
-            « {{with.Site.Data.l10n.pagination.previous}}{{.}}{{end}}
-        </a>
-    {{ end }}
+     <nav id="pagination"> 
+      {{ if .Paginator.HasPrev }}<ul class="pagination"><li><a rel="prev" href="{{.Paginator.Prev.URL}}">« {{with.Site.Data.l10n.pagination.previous}}{{.}}{{end}}</a></li></ul>
+      {{ end }}
+     {{ template "_internal/pagination.html" . }}
     {{ if .Paginator.HasNext }}
-        <a class="extend next" rel="next" href="{{.Paginator.Next.URL}}">
-            « {{with.Site.Data.l10n.pagination.next}}{{.}}{{end}} »
-        </a>
+       <ul class="pagination"><li> <a class="extend next" rel="next" href="{{.Paginator.Next.URL}}">
+           {{with.Site.Data.l10n.pagination.next}}{{.}}{{end}} »
+        </a></li></ul>
     {{ end }}
+    </nav>
 {{ end }}
-</nav>
+
+ 
