@@ -3,7 +3,7 @@
         <i class="fa fa-tag"></i>
         <div class="tagliste">
             {{ range .Params.tags }}
-            <a class="article-tag-link label" href="{{ $.Site.BaseURL }}tags/{{ . | lower }}">#{{ . }}</a> 
+            <a class="article-tag-link label" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a> 
             {{ end }}
         </div>
     </div>
