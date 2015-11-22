@@ -19,12 +19,10 @@
             <h1 itemprop="name">
                 <a class="archive-article-title" href="{{ .Permalink }}">{{ .Title }}</a>
             </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+            <div class="archive-article-date">      
                 {{ range .Params.tags }}
-            <a class="btn btn-default" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a> 
-            {{ end }}
+                <a class="btn btn-default" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a> 
+                {{ end }}   
             </div>
         </header>
     </div>
