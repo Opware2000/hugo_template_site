@@ -749,9 +749,6 @@ html {
   right: 15px;
   top: 50%;
 }
-#search-form-wrap .search-form .search-form-submit:before {
-  content: '\f002';
-}
 #search-form-wrap .search-form .search-form-submit:hover {
   color: #777777;
 }
@@ -3159,4 +3156,15 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
   position: relative;
   width: 100%;
+}
+search-form-wrap .search-form .search-form-submit {
+  top: 50%;
+  right: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: -7px;
+  background: none;
+  position: absolute;
+  font: 13px font-icon;
+  font-family: 'FontAwesome';
 }
