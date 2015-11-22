@@ -1,12 +1,7 @@
 <section id="main">
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
-            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-            <img src="{{ .Site.BaseURL }}images/{{ .Params.banner }}" class="article-banner">
-            {{ end }}
-            {{ if (not (isset .Params "banner")) }}
-            <img src="{{ .Site.BaseURL }}/images/header/writingonlaptop.jpg" class="article-banner">
-            {{ end }}
+            <img src="{{ .Site.BaseURL }}/images/header/glossaire.jpg" class="article-banner">
             {{ partial "article_header" . }}
             <div class="article-entry" itemprop="articleBody">
                 {{ .Content }}
