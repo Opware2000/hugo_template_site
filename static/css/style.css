@@ -120,17 +120,11 @@ a img {
 a:visited {
   color: #38b7ea;
 }
-input {
-  margin: 0;
-  padding: 0;
-}
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
 button {
   margin: 0;
   padding: 0;
+  border: none;
+  background: none;
 }
 button::-moz-focus-inner {
   border: 0;
@@ -211,7 +205,8 @@ html {
 .article-inner,
 #comments,
 .archive-article,
-#toTop {
+#toTop,
+#gn-menu {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   background: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -635,11 +630,13 @@ html {
   margin-bottom: 0;
   margin-top: 0;
 }
-#header {
+#header,
+#gn-menu {
   background: #ffffff;
   position: relative;
 }
-#header a {
+#header a,
+#gn-menu a {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
@@ -647,7 +644,8 @@ html {
   transition: 0.2s ease;
   white-space: nowrap;
 }
-#header a:visited {
+#header a:visited,
+#gn-menu a:visited {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   -webkit-transition: 0.2s ease;
@@ -655,7 +653,8 @@ html {
   transition: 0.2s ease;
   white-space: nowrap;
 }
-#header a:hover {
+#header a:hover,
+#gn-menu a:hover {
   color: #38b7ea;
 }
 .header-inner #logo,
@@ -3167,4 +3166,8 @@ search-form-wrap .search-form .search-form-submit {
   position: absolute;
   font: 13px font-icon;
   font-family: 'FontAwesome';
+}
+search-form-wrap .search-form .search-form-submit button {
+  background: none;
+  border: none;
 }
