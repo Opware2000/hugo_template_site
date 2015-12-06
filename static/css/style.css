@@ -136,6 +136,7 @@ html {
 #container {
   height: 100%;
   position: relative;
+  margin-top: 60px;
 }
 .outer {
   margin: 0 auto;
@@ -633,7 +634,7 @@ html {
 #header,
 #gn-menu {
   background: #ffffff;
-  position: relative;
+  z-index: 9999;
 }
 #header a,
 #gn-menu a {
@@ -1022,8 +1023,9 @@ html {
   display: block;
   min-width: 280px;
   position: absolute;
-  right: 20px;
-  top: 50px;
+  right: 0px;
+  top: 0px;
+  margin-top: -60px;
   z-index: 999;
 }
 #profile.card .profile-inner {

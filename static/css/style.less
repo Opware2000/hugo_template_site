@@ -172,6 +172,7 @@ html {
 #container {
     height: @height9;
     position: relative;
+    margin-top: 60px;
 }
 .outer {
     margin: 0 auto;
@@ -659,7 +660,8 @@ html {
 }
 #header, #gn-menu {
     background: @color0;
-    position: relative;
+    // position: relative;
+    z-index: 9999;
     a {
         -moz-transition: 0.2s ease;
         -ms-transition: 0.2s ease;
@@ -1051,8 +1053,9 @@ html {
     display: block;
     min-width: @width2;
     position: absolute;
-    right: 20px;
-    top: 50px;
+    right: 0px;
+    top: 0px;
+    margin-top:-60px;
     z-index: 999;
     .profile-inner {
         -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
