@@ -1,14 +1,14 @@
 // Color variables (appears count calculates by raw css)
 @color0: #ffffff; // Appears 25 times
-@color1: #38b7ea; // Appears 18 times
+@color1: #2196F3; // Appears 18 times
 @color2: #565a5f; // Appears 18 times
-@color3: #999999; // Appears 15 times
+@color3: #37474F; // Appears 15 times
 @color4: #eceff2; // Appears 14 times
 @color5: #333333; // Appears 9 times
-@color6: #777777; // Appears 6 times
-@color7: #cccccc; // Appears 5 times
+@color6: #607D8B; // Appears 6 times
+@color7: #607D8B; // Appears 5 times
 @color8: #9a9ea3; // Appears 4 times
-@color9: #f0f3f4; //#f5f8f9; // Appears 4 times
+@color9: #CFD8DC; //#f5f8f9; // Appears 4 times
 @color10: #66d9ef; // Appears 3 times
 @color11: #66cccc; // Appears 3 times
 @color12: #99cc99; // Appears 2 times
@@ -148,14 +148,14 @@ a {
         color: @color1;
     }
 }
-input {
-    margin: 0;
-    padding: 0;
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
-}
+// input {
+//     margin: 0;
+//     padding: 0;
+//     &::-moz-focus-inner {
+//         border: 0;
+//         padding: 0;
+//     }
+// }
 button {
     margin: 0;
     padding: 0;
@@ -163,6 +163,8 @@ button {
         border: 0;
         padding: 0;
     }
+    border: none;
+    background:none;
 }
 html {
     height: @height9;
@@ -170,6 +172,7 @@ html {
 #container {
     height: @height9;
     position: relative;
+    margin-top: 60px;
 }
 .outer {
     margin: 0 auto;
@@ -225,7 +228,7 @@ html {
     text-decoration: none;
     text-transform: uppercase;
 }
-#header, #profile .inner, .article-inner, #comments, .archive-article, #toTop  {
+#header, #profile .inner, .article-inner, #comments, .archive-article, #toTop, #gn-menu  {
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     background: @color0;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -539,8 +542,6 @@ html {
         font-size: 0.85em;
     }
     ul {
-        list-style: disc;
-        list-style: none;
         list-style: none;
         margin: 0;
         li {
@@ -655,9 +656,10 @@ html {
     margin-bottom: 0;
     margin-top: 0;
 }
-#header {
+#header, #gn-menu {
     background: @color0;
-    position: relative;
+    // position: relative;
+    z-index: 9999;
     a {
         -moz-transition: 0.2s ease;
         -ms-transition: 0.2s ease;
@@ -1049,8 +1051,9 @@ html {
     display: block;
     min-width: @width2;
     position: absolute;
-    right: 20px;
-    top: 50px;
+    right: 0px;
+    top: 0px;
+    margin-top:-60px;
     z-index: 999;
     .profile-inner {
         -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -1089,6 +1092,7 @@ html {
 .article-banner {
     height: auto;
     width: @width13;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12),0 1px 2px 0 rgba(0,0,0,.24);
 }
 .article-meta {
     &:before {
@@ -3094,5 +3098,9 @@ search-form-wrap .search-form .search-form-submit {
     position: absolute;
     font: 13px font-icon;
     font-family: 'FontAwesome';
+    button {
+        background: none;
+    border: none;
+    }
 }
 
