@@ -11,8 +11,7 @@
                     <button type="submit" class="search-form-submit"><i class="fa fa-search"></i>
                     </button>
                     <input type="hidden" name="q" value="site:{{ .Site.BaseURL }}">
-               </form>
-                  <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                  </form>
                 </li>
                 {{ range .Site.Params.menu }}
                   {{ if .before }}
@@ -22,9 +21,14 @@
                 <li>
                   <a class="gn-icon gn-icon-archive" href="{{ .Site.BaseURL }}cours/" title="Cours">Cours de SVT</a>
                     <ul class="gn-submenu">
-                    <li> <a class="gn-icon gn-icon-article" href="http://{{ .Site.BaseURL }}cours/#5-sup-e-sup:19a792b5966de5dbafba53e79b7ba4fa">5<sup>e</sup></a>
+                    <li> <a class="gn-icon gn-icon-article" href="{{ .Site.BaseURL }}cours_5e/">cours de 5<sup>e</sup></a>
+                    </li>
+                    <li> <a class="gn-icon gn-icon-article" href="{{ .Site.BaseURL }}cours_3e/">cours de 3<sup>e</sup></a>
                     </li>
                     </ul>
+                </li>
+                <li>
+                  <a class="gn-icon gn-icon-earth" href="{{ .Site.BaseURL }}blog/" title="Actualité des sciences">Actus scientifiques</a>
                 </li>
                 {{ range .Site.Menus.main }}
                   <li><a class="gn-icon gn-icon-article" href="{{ .URL }}">{{ .Name }}</a></li>
@@ -34,6 +38,11 @@
                     <li><a class="gn-icon {{.icon}}" href="{{ .link | absURL }}">{{ .label }}</a></li>
                   {{ end }}
                 {{ end }}
+                <li>
+                  <a class="gn-icon gn-icon-cog" href="{{ .Site.BaseURL }}glossaire/">
+                  Glossaire
+                  </a>
+                </li>
               </ul>
             </div><!-- /gn-scroller -->
           </nav>
