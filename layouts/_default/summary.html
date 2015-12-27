@@ -22,6 +22,12 @@
             <div class="archive-article-date">
                 <i class="fa fa-calendar"></i>
                 <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+                &nbsp;<small>
+                    <i class="fa fa-tag"></i>&nbsp;                   
+                       {{ range .Params.tags }}
+                       <a class="article-tag-link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a>&nbsp;
+                       {{ end }}
+                </small>
             </div>
         </header>
     </div>

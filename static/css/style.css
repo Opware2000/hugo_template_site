@@ -1433,7 +1433,7 @@ a.article-title:hover {
 }
 .archive-article-thumbnail {
   float: left;
-  margin-right: 10px;
+  margin: 10px;
 }
 .archive-article-thumbnail .thumbnail {
   display: block;
@@ -3172,4 +3172,7 @@ search-form-wrap .search-form .search-form-submit {
 search-form-wrap .search-form .search-form-submit button {
   background: none;
   border: none;
+}
+article h1 {
+  font-size: 1.5em;
 }
