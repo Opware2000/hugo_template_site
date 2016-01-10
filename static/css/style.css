@@ -2063,6 +2063,9 @@ article a.article-category-link:hover {
 }
 /* MEDIA QUERY */
 @media screen and (max-width: 559px) {
+  .hidden-phone {
+    display: none!important;
+  }
   .outer {
     padding: 0;
   }
@@ -2113,6 +2116,9 @@ article a.article-category-link:hover {
   }
 }
 @media screen and (min-width: 560px) and (max-width: 799px) {
+  .hidden-tablet {
+    display: none!important;
+  }
   #toTop {
     width: 54px;
     height: 54px;
