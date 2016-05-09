@@ -24,6 +24,14 @@
     {{ template "_internal/google_news.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+            <meta property="og:image" content="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" />
+			<meta name="twitter:image" content="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" />
+            {{ end }}
+            {{ if (not (isset .Params "banner")) }}
+            <meta property="og:image" content="{{ .Site.BaseURL }}images/header/writingonlaptop.jpg" />
+			<meta property="twitter:image" content="{{ .Site.BaseURL }}images/header/writingonlaptop.jpg" />
+            {{ end }}
 </head>
 <body>
 <div class="container">
