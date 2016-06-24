@@ -1,11 +1,10 @@
 +++
-title = "Introducing Icarus and its features"
 date = "2015-10-10T16:56:43+02:00"
+title = "Introducing Icarus and it's features"
 tags = ["theme", "hugo", "static sites"]
-categories = ["theme"]
-menu = ""
 images = []
 banner = "banners/placeholder.png"
+categories = ["Lorem"]
 +++
 
 Icarus is a responsive and customizable theme for bloggers. It's a port of the same-named theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code, optional widgets for the sidebar and a handful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
@@ -19,12 +18,20 @@ I assume you've Git installed. Inside the folder of your Hugo site run
     $ cd themes
     $ git clone git@github.com:digitalcraftsman/hugo-icarus-theme.git
 
+<<<<<<< HEAD
 You should see a folder called `hugo-icarus-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+=======
+You should see a folder called `hugo-icarus-theme` inside the `themes` directory, that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+>>>>>>> new-icaurs
 
 
 ## Setup
 
+<<<<<<< HEAD
 In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. Its structure should look similar to this:
+=======
+In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. It's structure shoud look similar to this:
+>>>>>>> new-icaurs
 
     exampleSite
     ├── config.toml
@@ -52,6 +59,7 @@ Now, let us take a look into the `config.toml`. Feel free to play around with th
 
 ### Comments
 
+<<<<<<< HEAD
 The optional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
 
     disqusShortname = ""
@@ -64,6 +72,12 @@ disable_comments = true
 +++
 ```
 
+=======
+The opional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
+
+    disqusShortname = ""
+
+>>>>>>> new-icaurs
 
 ### Menu
 
@@ -80,6 +94,7 @@ Furthermore, we can add entries that don't link to posts. Back in the `config.to
         label  = "Home"
         link   = "/"
 
+<<<<<<< HEAD
 Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. `Home` appears before the linked post, `Tags` and `Categories` after them (as in the menu above).
 
 
@@ -96,6 +111,12 @@ disable_widgets = true
 
 
 ### Tell me who you are
+=======
+Define a label and enter the URL to resource you want to link. With `before` you can decide wether the link should appear before **or** after all linked posts in the menu. `Home` appears before the linked post, `Tags` and `Categories` after them (as in the menu above).
+
+
+### Tell me who you're
+>>>>>>> new-icaurs
 
 Maybe you noticed the profile section on the left. Add your social network accounts to the profile section on the left by entering your username under `social`. The links to your account will be create automatically.
 
@@ -113,7 +134,11 @@ On the right, you can see some useful widgets that you can activate as you like.
 
 ## Localization (l10n)
 
+<<<<<<< HEAD
 You don't blog in English and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+=======
+You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+>>>>>>> new-icaurs
 
 
 ## Linking thumbnails
@@ -127,6 +152,7 @@ This way you can store them either next to the content file or in the `static` f
 
 ## Mathematical equations
 
+<<<<<<< HEAD
 Mathematical equations in form of LaTeX or MathML code can be rendered with the support of [MathJax](https://www.mathjax.org). MathML works out of the box. If you're using LaTeX you need to wrap your equation with `$$` as shown in the following example:
 
     $$ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) $$
@@ -134,11 +160,22 @@ Mathematical equations in form of LaTeX or MathML code can be rendered with the 
 $$ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) $$
 
 You can also print formulas inline: $a^2 + b^2 = c^2$. In this case wrap the formula only once with `$`.
+=======
+In case you need to display equations you can insert your Latex or MathML code and it works out of the box thanks to [MathJax](https://www.mathjax.org).
+
+    \[ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) \]
+
+\[ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) \]
+>>>>>>> new-icaurs
 
 
 ## Shortcodes
 
+<<<<<<< HEAD
 Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
+=======
+Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your like easier.
+>>>>>>> new-icaurs
 
 ### Gallery
 
@@ -155,7 +192,11 @@ This way you can include a gallery into your post. Copy the code below into your
 {{< gallery "/banners/placeholder.png" "/banners/placeholder.png" "/banners/placeholder.png" >}}
 
 
+<<<<<<< HEAD
 ### JSFiddle
+=======
+### JSFidde
+>>>>>>> new-icaurs
 
 It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
 
@@ -180,12 +221,20 @@ In order to see your site in action, run Hugo's built-in local server.
 
     $ hugo server
 
+<<<<<<< HEAD
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+=======
+Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
+>>>>>>> new-icaurs
 
 
 ## Contributing
 
+<<<<<<< HEAD
 Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+=======
+Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+>>>>>>> new-icaurs
 
 
 ## License

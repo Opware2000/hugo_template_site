@@ -5,30 +5,34 @@
     </h3>
     <div class="widget">
         <ul id="recent-post">
-            {{ range first 5 (where .Site.Pages "Type" "post") }}
+            {{ range first 5 (where .Site.Pages "Type" "blog") }}
             <li>
+                {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+                {{ with .Params.banner }}
                 <div class="item-thumbnail">
-                    <a href="{{ .Permalink }}" class="thumbnail">
-                    {{ if isset .Params "banner" }}
-                        <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
-                    {{else}}
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    {{ end }}
+                    <a href="{{ $.Permalink }}" class="thumbnail">
+                        <span style="background-image:url({{ $.Site.BaseURL }}images/{{ . }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
                     </a>
                 </div>
+                {{ end }}
+                {{ else }}
+                <div class="item-thumbnail">
+                    <a href="{{ $.Permalink }}" class="thumbnail">
+                        <span style="background-image:url({{ $.Site.BaseURL }}images/article.png)" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                    </a>
+                </div>
+                {{ end }}
                 <div class="item-inner">
-                    {{ if isset .Params "categories" }}
-                    {{ if gt (len .Params.categories) 0 }}
+                    {{ if ge (len .Params.categories ) 1 }}
                     <p class="item-category">
-                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">
-                        {{ index .Params.categories 0 }}
+                        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | lower }}">
+                        <small>{{ index .Params.categories 0 }}</small>
                         </a>
                     </p>
                     {{ end }}
-                    {{ end }}
                     <p class="item-title"><a href="{{ .Permalink }}" class="title">{{ .Title }}</a></p>
-                    <p class="item-date">
-                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
+                    <p class="item-date"><small>
+                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time></small>
                     </p>
                 </div>
             </li>

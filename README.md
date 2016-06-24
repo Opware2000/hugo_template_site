@@ -10,14 +10,24 @@ I assume you've Git installed. Inside the folder of your Hugo site run
 
     $ mkdir themes
     $ cd themes
+<<<<<<< HEAD
     $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
 
 You should see a folder called `hugo-icarus-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+=======
+    $ git clone git@github.com:digitalcraftsman/hugo-icarus-theme.git
+
+You should see a folder called `hugo-icarus-theme` inside the `themes` directory, that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+>>>>>>> new-icaurs
 
 
 ## Setup
 
+<<<<<<< HEAD
 In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. Its structure should look similar to this:
+=======
+In the next step navigate to the `exampleSite` folder at `themes/hugo-icarus-theme/exampleSite/`. It's structure shoud look similar to this:
+>>>>>>> new-icaurs
 
     exampleSite
     ├── config.toml
@@ -45,6 +55,7 @@ Now, let us take a look into the `config.toml`. Feel free to play around with th
 
 ### Comments
 
+<<<<<<< HEAD
 The optional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
 
     disqusShortname = ""
@@ -57,6 +68,12 @@ disable_comments = true
 +++
 ```
 
+=======
+The opional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.
+
+    disqusShortname = ""
+
+>>>>>>> new-icaurs
 
 ### Menu
 
@@ -73,6 +90,7 @@ Furthermore, we can add entries that don't link to posts. Back in the `config.to
         label  = "Home"
         link   = "/"
 
+<<<<<<< HEAD
 Define a label and enter the URL to resource you want to link. With `before` you can decide whether the link should appear before **or** after all linked posts in the menu. Therefore, `Home` appears before the linked post.
 
 
@@ -89,6 +107,12 @@ disable_widgets = true
 
 
 ### Tell me who you are
+=======
+Define a label and enter the URL to resource you want to link. With `before` you can decide wether the link should appear before **or** after all linked posts in the menu. Therefore, `Home` appears before the linked post.
+
+
+### Tell me who you're
+>>>>>>> new-icaurs
 
 This theme also provides a profile section on the left. Add your social network accounts to the profile section on the left by entering your username under `social`. The links to your account will be create automatically.
 
@@ -111,9 +135,17 @@ You can deactivate them under `params.widgets`:
         tag_cloud = true
 
 
+<<<<<<< HEAD
 ## Localization (l10n)
 
 You don't blog in English and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+=======
+
+
+## Localization (l10n)
+
+You don't blog in english and you want to translate the theme into your native locale? No problem. Take a look in the `data` folder and you'll find a file `l10n.toml` that we've copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.
+>>>>>>> new-icaurs
 
 
 ## Linking thumbnails
@@ -127,14 +159,22 @@ This way you can store them either next to the content file or in the `static` f
 
 ## Mathematical equations
 
+<<<<<<< HEAD
 Mathematical equations in form of LaTeX or MathML code can be rendered with the support of [MathJax](https://www.mathjax.org). MathML works out of the box. If you're using LaTeX you need to wrap your equation with `$$`.
 
 You can also print formulas inline. In this case wrap the formula only once with `$`.
+=======
+In case you need to display equations you can insert your Latex or MathML code and it works out of the box thanks to [MathJax](https://www.mathjax.org).
+>>>>>>> new-icaurs
 
 
 ## Shortcodes
 
+<<<<<<< HEAD
 Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
+=======
+Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your like easier.
+>>>>>>> new-icaurs
 
 
 ### Gallery
@@ -147,7 +187,20 @@ This way you can include a gallery into your post. Copy the code below into your
         "/banners/placeholder.png"
     >}}
 
+<<<<<<< HEAD
 ### JSFiddle
+=======
+
+### Github Gists
+
+Enter the id of your gist and you're ready to go.
+
+    {{<  gist "85f59771b5ae1e2091a8" >}}
+
+Note, that this only works with public gists since authentification is not supported.
+
+### JSFidde
+>>>>>>> new-icaurs
 
 It works the same with JSFiddle examples you want to showcase. The parameter `id` consists of the username and id of the example.
 
@@ -157,18 +210,40 @@ As descibed in the [docs of JSFiddle](http://doc.jsfiddle.net/use/embedding.html
 
     {{< jsfiddle id="zalun/NmudS" tabs="html,result" >}}
 
+<<<<<<< HEAD
+=======
+### Vimeo and Youtube
+
+The embedding of videos from Vimeo and Youtube is also supported.
+
+    {{< youtube "w7Ft2ymGmfc" >}}
+
+    {{< vimeo "137643804" >}}
+
+
+>>>>>>> new-icaurs
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
 
+<<<<<<< HEAD
     $ hugo server
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+=======
+    $ hugo server -w
+
+Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
+>>>>>>> new-icaurs
 
 
 ## Contributing
 
+<<<<<<< HEAD
 Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+=======
+Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+>>>>>>> new-icaurs
 
 
 ## License
@@ -176,9 +251,15 @@ Have you found a bug or got an idea for a new feature? Feel free to use the [iss
 This theme is released under the MIT license. For more information read the [license](https://github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md).
 
 
+<<<<<<< HEAD
 ## Acknowledgements
 
 Thanks to 
 
 - [Ruipeng Zhang](https://github.com/ppoffice) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
+=======
+## Annotations
+
+Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
+>>>>>>> new-icaurs

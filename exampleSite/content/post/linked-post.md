@@ -1,9 +1,9 @@
 +++
-title = "Linked post"
 date = "2015-10-02T21:49:20+02:00"
+title = "Linked post"
+menu = "main"
 tags = ["golang", "programming", "theme", "hugo"]
 categories = ["programming"]
-menu = "main"
 banner = "banners/placeholder.png"
 +++
 
