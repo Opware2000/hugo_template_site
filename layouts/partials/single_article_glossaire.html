@@ -1,0 +1,14 @@
+<section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            <img src="{{ .Site.BaseURL }}/images/header/glossaire.jpg" class="article-banner">
+            {{ partial "article_header" . }}
+            <div class="article-entry" itemprop="articleBody">
+                {{ .Content }}
+            </div>
+            {{ partial "article_footer" . }}
+        </div>
+
+        {{ partial "prev_next_post" . }}
+    </article>
+</section>

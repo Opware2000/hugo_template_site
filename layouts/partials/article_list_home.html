@@ -1,0 +1,32 @@
+<section id="main">
+    {{ $paginator := .Paginate (where .Site.Pages "Type" "blog") }}
+    {{ range $paginator.Pages }}
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            <a href="{{ .Permalink }}" class="banner" itemprop="url">
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}            
+                <img src="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" class="article-banner"> 
+            {{ end }}
+            {{ if (not (isset .Params "banner")) }}
+                <img src="{{ .Site.BaseURL }}/images/header/writingonlaptop.jpg" class="article-banner">
+            {{ end }}
+            </a>
+            {{ partial "article_header" . }}
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    {{ .Summary }}
+                </p>
+                <p class="article-more-link">
+                    <a href="{{ .Permalink }}">
+                        {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
+                    </a>
+                </p>
+            </div>
+            {{ partial "article_footer" . }}
+        </div>
+    </article>
+    {{ end }}
+
+    {{ partial "pagination" . }}
+</section>
+<!-- // main section -->
