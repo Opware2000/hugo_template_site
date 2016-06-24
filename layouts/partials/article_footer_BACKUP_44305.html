@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+ <footer class="article-footer">
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <div class="tagliste">
+           {{ range .Params.tags }}
+           <a class="article-tag-link label" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a> 
+           {{ end }}
+       </div>
+   </div>
+   <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="  article-share-link">
+    {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
+    </a>
+    {{ if not (eq .Site.DisqusShortname "") }}
+    <a href="{{ .Permalink }}/#disqus_thread" class=" article-comment-link">
+        {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+    </a>
+    {{end}}
+    <div >
+     {{ if(isset .Params "Lastmod")}}
+     (dernière modification le {{ .Lastmod.Day }} {{ index $.Site.Data.mois (printf "%d" .Lastmod.Month) }} {{ .Lastmod.Year }})
+     {{ end }}
+    </div>
+=======
+<footer class="article-footer">
+    <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+        {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
+    </a>
+    {{ if not (eq .Site.DisqusShortname "") }}
+    <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">
+        {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+    </a>
+    {{end}}
+>>>>>>> 5d8c8f3229e24aa71acbdd1cbe2bf8bd7d9e5f58
+</footer>

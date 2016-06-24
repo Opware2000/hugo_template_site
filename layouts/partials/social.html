@@ -1,6 +1,11 @@
 {{ with .Site.Social.github }}
-<td><a href="//github.com/{{.}}" target="_blank" title="Github"><i class="fa fa-github"></i></a></td>
+<td><a href="//github.com/{{.}}" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
 {{ end }}
+
+{{ with .Site.Social.gitlab }}
+<td><a href="//gitlab.com/u/{{.}}" target="_blank" title="GitLab"><i class="fa fa-gitlab"></i></a></td>
+{{ end }}
+
 
 {{ with .Site.Social.bitbucket }}
 <td><a href="//bitbucket.com/{{.}}" target="_blank" title="Bitbucket"><i class="fa fa-bitbucket"></i></a></td>
@@ -11,7 +16,7 @@
 {{ end }}
 
 {{ with .Site.Social.codepen }}
-<td><a href="//codepen.io/{{.}}" target="_blank" title="Codepen"><i class="fa fa-codepen"></i></a></td>
+<td><a href="//codepen.io/{{.}}" target="_blank" title="CodePen"><i class="fa fa-codepen"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.foursquare }}
@@ -23,7 +28,7 @@
 {{ end }}
 
 {{ with .Site.Social.deviantart }}
-<td><a href="//{{.}}.deviantart.com/" target="_blank" title="Deviantart"><i class="fa fa-deviantart"></i></a></td>
+<td><a href="//{{.}}.deviantart.com/" target="_blank" title="DeviantArt"><i class="fa fa-deviantart"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.behance }}
@@ -39,7 +44,7 @@
 {{ end }}
 
 {{ with .Site.Social.youtube }}
-<td><a href="//youtube.com/{{.}}" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></td>
+<td><a href="//youtube.com/{{.}}" target="_blank" title="YouTube"><i class="fa fa-youtube"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.vimeo }}
@@ -55,7 +60,7 @@
 {{ end }}
 
 {{ with .Site.Social.wordpress }}
-<td><a href="//{{.}}.wordpress.com" target="_blank" title="Wordpress"><i class="fa fa-wordpress"></i></a></td>
+<td><a href="//{{.}}.wordpress.com" target="_blank" title="WordPress"><i class="fa fa-wordpress"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.tumblr }}
@@ -67,15 +72,15 @@
 {{ end }}
 
 {{ with .Site.Social.linkedin }}
-<td><a href="//linkedin.com/in/{{.}}" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></td>
+<td><a href="//linkedin.com/in/{{.}}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.slideshare }}
-<td><a href="//slideshare.com/{{.}}" target="_blank" title="Slideshare"><i class="fa fa-slideshare"></i></a></td>
+<td><a href="//slideshare.com/{{.}}" target="_blank" title="SlideShare"><i class="fa fa-slideshare"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.stackoverflow }}
-<td><a href="//stackoverflow.com/users/{{.}}" target="_blank" title="Stackoverflow"><i class="fa fa-stackoverflow"></i></a></td>
+<td><a href="//stackoverflow.com/users/{{.}}" target="_blank" title="Stack Overflow"><i class="fa fa-stackoverflow"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.reddit }}
@@ -87,7 +92,7 @@
 {{ end }}
 
 {{ with .Site.Social.googleplus }}
-<td><a href="//plus.google.com/+{{.}}" target="_blank" title="Google+"><i class="fa fa-googleplus"></i></a></td>
+<td><a href="//plus.google.com/+{{.}}" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
 {{ end }}
 
 {{ with .Site.Social.facebook }}

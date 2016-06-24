@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
+<<<<<<< HEAD
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+=======
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+>>>>>>> 5d8c8f3229e24aa71acbdd1cbe2bf8bd7d9e5f58
     {{ .Hugo.Generator }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+<<<<<<< HEAD
+    {{ with .Site.Params.site_description }}<meta name="description" content="{{ . }}">{{ end }}
+=======
     {{ with .Description }}
       <meta name="description" content="{{ . }}">
     {{ else }}
       <meta name="description" content="{{ .Site.Params.site_description }}">
     {{ end }}
+>>>>>>> 5d8c8f3229e24aa71acbdd1cbe2bf8bd7d9e5f58
     {{ if .RSSlink }}
       <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
       <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -19,14 +27,32 @@
     <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/component.css" />
+    <script src="{{ .Site.BaseURL }}js/modernizr.custom.js"></script>
+=======
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/monokai.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+>>>>>>> 5d8c8f3229e24aa71acbdd1cbe2bf8bd7d9e5f58
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/google_news.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+<<<<<<< HEAD
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+            <meta property="og:image" content="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" />
+			<meta name="twitter:image" content="{{ .Site.BaseURL }}images/header/{{ .Params.banner }}" />
+            {{ end }}
+            {{ if (not (isset .Params "banner")) }}
+            <meta property="og:image" content="{{ .Site.BaseURL }}images/header/writingonlaptop.jpg" />
+			<meta property="twitter:image" content="{{ .Site.BaseURL }}images/header/writingonlaptop.jpg" />
+            {{ end }}
+=======
     {{ partial "head_custom" . }}
 
     {{ if .Params.disable_profile | and .Params.disable_widgets }}
@@ -36,6 +62,7 @@
         }
     </style>
     {{ end }}
+>>>>>>> 5d8c8f3229e24aa71acbdd1cbe2bf8bd7d9e5f58
 </head>
 <body>
 <div class="container">

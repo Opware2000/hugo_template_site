@@ -5,7 +5,7 @@ description = "The blog theme you may fall in love with, coming to Hugo. "
 homepage = "//github.com/digitalcraftsman/hugo-icarus-theme"
 tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
 features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive"]
-min_version = 0.14
+min_version = 0.15
 
 [author]
   name = "Digitalcraftsman"
@@ -14,5 +14,5 @@ min_version = 0.14
 # If porting an existing theme
 [original]
   name = "Ruipeng Zhang"
-  homepage = "//blog.zhangruipeng.me"
+  homepage = "http://blog.zhangruipeng.me"
   repo = "//github.com/ppoffice/hexo-theme-icarus"

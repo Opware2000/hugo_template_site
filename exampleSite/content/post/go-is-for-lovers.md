@@ -1,10 +1,10 @@
 +++
-banner = "banners/placeholder.png"
-categories = ["Ipsum"]
-date = "2015-09-17T13:47:08+02:00"
-menu = ""
-tags = []
 title = "Go is for lovers"
+date = "2015-09-17T13:47:08+02:00"
+tags = ["go"]
+categories = ["programming"]
+menu = ""
+banner = "banners/placeholder.png"
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for
@@ -231,7 +231,7 @@ instead of depending on the context.
 
       {{ $title := .Site.Title }}
       {{ range .Params.tags }}
-        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> - {{ $title }} </li>
+        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize | lower  }}">{{ . }}</a> - {{ $title }} </li>
       {{ end }}
 
 Notice how once we have entered the loop the value of {{ . }} has changed. We
